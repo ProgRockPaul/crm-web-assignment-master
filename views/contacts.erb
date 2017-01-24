@@ -1,0 +1,12 @@
+<h1>All Contacts</h1>
+
+<ul>
+<% Contact.all.each do |contact| %>
+  <li><%= contact.first_name %> <%= contact.last_name %></li>
+<% end %>
+</ul>
+
+
+<!--
+<% %> is great for each statements and other blocks, since it won't actually output the value inside the wrappers, but only execute the code.
+<%= %> behaves much more like a puts. Change them and see what happens. -->
