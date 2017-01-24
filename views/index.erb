@@ -1,16 +1,7 @@
-<h1>Welcome to My CRM!</h1>
+<h1>Welcome to <%= @crm_app_name %>!</h1>
 <p>Main menu</p>
 <ul>
   <li><a href="/contacts">View all contacts</a></li>
-  <h1>Welcome to <%= @crm_app_name %>!</h1>
   <h1>Create new Contact</h1>
-
-    <form action='/contacts' method='post'>
-      <input type='text' name='first_name'>
-      <input type='text' name='last_name'>
-      <input type='text' name='email'>
-      <input type='text' name='note'>
-      <input type='submit' value='New Contact'>
-    </form>
-
+  <li><a href="/contacts/new">Add a new contact</a></li>
 </ul>
