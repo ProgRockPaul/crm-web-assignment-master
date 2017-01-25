@@ -28,11 +28,7 @@ class Contact
   end
 
   def self.find(id)
-    @@contacts.each do |contact|
-      if id == contact.id
-        return contact
-      end
-    end
+    @@contacts.find { |contact| contact.id == id }
   end
 
   def update(attribute, value)
@@ -94,6 +90,3 @@ class Contact
     @@contacts
   end
 end
-
-paul = Contact.new('Paul', 'Walsh', 'twentytwentyk@live.com', 'Local Bard')
-john = Contact.new('John', 'Petrucci', 'bearucci@gmail.com', 'Local Bear')
