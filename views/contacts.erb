@@ -1,21 +1,20 @@
-<h1>All Contacts</h1>
+<!-- <h1>All Contacts</h1>
 
 <ul>
 <% Contact.all.each do |contact| %>
   <li><%= contact.first_name %> <%= contact.last_name %></li>
 <% end %>
-</ul>
-
-  <!-- <h1>Create new Contact</h1>
-
-  <form action='/contacts' method='post'>
-    <input type='text' name='first_name'>
-    <input type='text' name='last_name'>
-    <input type='text' name='email'>
-    <input type='text' name='note'>
-    <input type='submit' value='New Contact'>
-  </form> -->
-
-<!--
-<% %> is great for each statements and other blocks, since it won't actually output the value inside the wrappers, but only execute the code.
-<%= %> behaves much more like a puts. Change them and see what happens. -->
+</ul> -->
+<div class="contact_div">
+  <div class="contact_header"> <h3>There are <span>5</span> contacts</h3> </div>
+  <div>
+    <ul class="contact_list_div" style="list-style: none;">
+      <% Contact.all.each do |contact| %>
+        <div class="contact_list">
+          <li><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>) </li>
+          <p class="p"> <a href="/contacts/update">Edit </a> | <a href="/contacts/delete">Delete</a> </p>
+        </div>
+      <% end %>
+    </ul>
+  </div>
+</div>
